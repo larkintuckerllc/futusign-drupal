@@ -5,6 +5,8 @@ dependencies:
   module:
     - node
     - taxonomy
+_core:
+  default_config_hash: kHpO8Oy1Pli3N6nxEXZNuyVMuiRKtgnHhPwv7JW2v5M
 id: node.field_futusign_sd_on_playlist
 field_name: field_futusign_sd_on_playlist
 entity_type: node
@@ -13,7 +15,7 @@ settings:
   target_type: taxonomy_term
 module: core
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
