@@ -1,0 +1,17 @@
+uuid: 850a3356-f1b2-44c0-8f45-7dd5e3b3b66f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Screen
+type: futusign_screen
+description: 'Provides URL for digital sign'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

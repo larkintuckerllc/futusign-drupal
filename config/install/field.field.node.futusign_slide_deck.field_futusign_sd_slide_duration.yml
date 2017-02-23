@@ -1,0 +1,25 @@
+uuid: b88884c3-4718-4d62-9bc6-42743c940a2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_futusign_sd_slide_duration
+    - node.type.futusign_slide_deck
+id: node.futusign_slide_deck.field_futusign_sd_slide_duration
+field_name: field_futusign_sd_slide_duration
+entity_type: node
+bundle: futusign_slide_deck
+label: 'Slide Duration'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 10
+default_value_callback: ''
+settings:
+  min: 2
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

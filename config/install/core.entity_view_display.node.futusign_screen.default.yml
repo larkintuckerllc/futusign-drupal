@@ -1,0 +1,26 @@
+uuid: 9878d90e-0a60-48db-b4ad-df8b4ecf329d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.futusign_screen.field_futusign_sc_su_playlists
+    - node.type.futusign_screen
+  module:
+    - user
+id: node.futusign_screen.default
+targetEntityType: node
+bundle: futusign_screen
+mode: default
+content:
+  field_futusign_sc_su_playlists:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

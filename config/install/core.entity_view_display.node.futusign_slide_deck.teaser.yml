@@ -1,0 +1,23 @@
+uuid: f1b1e2ec-d05f-4222-b928-f267e67c53c1
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.futusign_slide_deck.field_futusign_sd_file
+    - field.field.node.futusign_slide_deck.field_futusign_sd_on_playlist
+    - field.field.node.futusign_slide_deck.field_futusign_sd_slide_duration
+    - node.type.futusign_slide_deck
+  module:
+    - user
+id: node.futusign_slide_deck.teaser
+targetEntityType: node
+bundle: futusign_slide_deck
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_futusign_sd_file: true
+  field_futusign_sd_on_playlist: true
+  field_futusign_sd_slide_duration: true

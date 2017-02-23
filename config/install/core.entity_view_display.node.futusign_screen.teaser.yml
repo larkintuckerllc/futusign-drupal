@@ -1,0 +1,17 @@
+uuid: bfdbf797-8d96-4e23-9e40-a5f6a33f60c7
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.futusign_screen
+  module:
+    - user
+id: node.futusign_screen.teaser
+targetEntityType: node
+bundle: futusign_screen
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }

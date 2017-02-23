@@ -1,0 +1,21 @@
+uuid: 419cfe36-ebe9-4a40-8c37-d829260ef936
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.futusign_playlist
+id: taxonomy_term.futusign_playlist.default
+targetEntityType: taxonomy_term
+bundle: futusign_playlist
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

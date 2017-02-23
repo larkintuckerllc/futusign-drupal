@@ -1,0 +1,27 @@
+uuid: 80b360b6-2055-4b9b-b61a-20a9eae5ae8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_futusign_sd_file
+    - node.type.futusign_slide_deck
+  module:
+    - file
+id: node.futusign_slide_deck.field_futusign_sd_file
+field_name: field_futusign_sd_file
+entity_type: node
+bundle: futusign_slide_deck
+label: File
+description: 'Portable Document Format (PDF) file consisting of one or more slides'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

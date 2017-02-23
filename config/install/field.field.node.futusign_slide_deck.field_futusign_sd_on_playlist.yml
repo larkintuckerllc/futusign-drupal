@@ -1,0 +1,28 @@
+uuid: a76fcba6-e0f6-449e-8a10-255eebd1830d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_futusign_sd_on_playlist
+    - node.type.futusign_slide_deck
+    - taxonomy.vocabulary.futusign_playlist
+id: node.futusign_slide_deck.field_futusign_sd_on_playlist
+field_name: field_futusign_sd_on_playlist
+entity_type: node
+bundle: futusign_slide_deck
+label: 'On Playlist'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      futusign_playlist: futusign_playlist
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,47 @@
+uuid: 7e1d7fbb-1d81-418f-94ae-ddd5d7c56082
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.futusign_screen.field_futusign_sc_su_playlists
+    - node.type.futusign_screen
+  module:
+    - path
+id: node.futusign_screen.default
+targetEntityType: node
+bundle: futusign_screen
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  field_futusign_sc_su_playlists:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

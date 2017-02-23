@@ -1,0 +1,28 @@
+uuid: 090d403b-361f-44af-b4f5-80faea62695d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_futusign_sc_su_playlists
+    - node.type.futusign_screen
+    - taxonomy.vocabulary.futusign_playlist
+id: node.futusign_screen.field_futusign_sc_su_playlists
+field_name: field_futusign_sc_su_playlists
+entity_type: node
+bundle: futusign_screen
+label: 'Subscribed Playlists'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      futusign_playlist: futusign_playlist
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

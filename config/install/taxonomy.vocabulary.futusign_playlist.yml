@@ -1,0 +1,9 @@
+uuid: 7040627d-8f4a-4cb1-95f8-f84dfc98b3a2
+langcode: en
+status: true
+dependencies: {  }
+name: Playlist
+vid: futusign_playlist
+description: 'List of slide decks'
+hierarchy: 0
+weight: 0

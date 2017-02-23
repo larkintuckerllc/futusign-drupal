@@ -1,0 +1,19 @@
+<?php
+/*
+function futusign_preprocess_page(&$variables) {
+  if ($node = \Drupal::request()->attributes->get('node')) {
+    $variables['node_id'] = $node->id();
+  }
+}
+function futusign_theme_registry_alter(&$theme_registry) {
+  $is_admin = Drupal::service('router.admin_context')->isAdminRoute();
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if (isset($node)) {
+    if ($node->getType() == 'fudge' && $is_admin == 0) {
+      $module_path = drupal_get_path('module', 'futusign');
+       $theme_registry['page']['path'] = $module_path . '/templates';
+    }
+  }
+  dpm($theme_registry);
+}
+*/

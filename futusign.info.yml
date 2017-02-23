@@ -1,0 +1,9 @@
+name: futusign
+description: Manage and display digital signage content
+package: Custom
+
+type: module
+core: 8.x
+
+dependencies:
+  - drupal:rest
