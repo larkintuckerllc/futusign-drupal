@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_futusign_sd_on_playlist
     - node.type.futusign_slide_deck
     - taxonomy.vocabulary.futusign_playlist
+_core:
+  default_config_hash: dAJab4iPwuFY1Cfbl-zDhEEDFXhlyI_MpP8T7XhlKrg
 id: node.futusign_slide_deck.field_futusign_sd_on_playlist
 field_name: field_futusign_sd_on_playlist
 entity_type: node
@@ -26,3 +28,4 @@ settings:
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference
+

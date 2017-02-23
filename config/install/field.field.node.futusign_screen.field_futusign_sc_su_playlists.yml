@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_futusign_sc_su_playlists
     - node.type.futusign_screen
     - taxonomy.vocabulary.futusign_playlist
+_core:
+  default_config_hash: FHgpbxpG9H5p_dQnIberKWir2i4Mk3Bg9Uma8KuYeUw
 id: node.futusign_screen.field_futusign_sc_su_playlists
 field_name: field_futusign_sc_su_playlists
 entity_type: node
@@ -26,3 +28,4 @@ settings:
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference
+
