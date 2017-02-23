@@ -2,18 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.futusign_screen
+    - node.type.futusign_slide_deck
+    - taxonomy.vocabulary.futusign_playlist
   module:
     - node
     - rest
     - serialization
+    - taxonomy
     - user
-_core:
-  default_config_hash: GgfQriusLc22Bjoj1F9P58uuS1ejVc7UxTW1e2AZdFg
-id: futusign_api_screens
-label: Screens
+id: futusign_api_slide_decks
+label: 'Slide Decks'
 module: views
-description: 'REST API endpoint; supports optional querying by id.'
+description: 'REST API endpoint; supports optional querying by playlists.'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -142,38 +142,36 @@ display:
           table: node_field_data
           field: type
           value:
-            futusign_screen: futusign_screen
+            futusign_slide_deck: futusign_slide_deck
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        nid:
-          id: nid
-          table: node_field_data
-          field: nid
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
+          operator: or
+          value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: nid_op
-            label: id
+            operator_id: tid_op
+            label: 'Has taxonomy term'
             description: ''
             use_operator: false
-            operator: nid_op
-            identifier: id
+            operator: tid_op
+            identifier: playlists
             required: false
             remember: false
-            multiple: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -186,9 +184,13 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: nid
-          plugin_id: numeric
+          reduce_duplicates: true
+          type: textfield
+          limit: true
+          vid: futusign_playlist
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       sorts:
         created:
           id: created
@@ -219,6 +221,7 @@ display:
         - request_format
         - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -229,7 +232,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: futusign/api/screens
+      path: futusign/api/slide_decks
       pager:
         type: none
         options:
@@ -250,6 +253,7 @@ display:
         - 'languages:language_interface'
         - request_format
         - url
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
