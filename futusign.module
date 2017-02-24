@@ -1,19 +1,40 @@
 <?php
 /*
-function futusign_preprocess_page(&$variables) {
-  if ($node = \Drupal::request()->attributes->get('node')) {
-    $variables['node_id'] = $node->id();
-  }
-}
-function futusign_theme_registry_alter(&$theme_registry) {
-  $is_admin = Drupal::service('router.admin_context')->isAdminRoute();
-  $node = \Drupal::routeMatch()->getParameter('node');
-  if (isset($node)) {
-    if ($node->getType() == 'fudge' && $is_admin == 0) {
-      $module_path = drupal_get_path('module', 'futusign');
-       $theme_registry['page']['path'] = $module_path . '/templates';
+  Implements hook_theme_suggestions_html_alter
+*/
+function futusign_theme_suggestions_html_alter(array &$suggestions, array $variables) {
+  if ($node = Drupal::request()->attributes->get('node')) {
+    $content_type = $node->bundle();
+    if ($content_type == 'futusign_screen') {
+      $suggestions[] = 'html__futusign_screen';
     }
   }
-  dpm($theme_registry);
 }
+/*
+  Implements hook_preprocess_html
 */
+function futusign_preprocess_html(&$variables) {
+  global $base_root, $base_path;
+  if ($node = Drupal::request()->attributes->get('node')) {
+    $content_type = $node->bundle();
+    if ($content_type == 'futusign_screen') {
+      $variables['app_root'] = $base_root . $base_path . drupal_get_path('module', 'futusign') . '/templates/screen';
+      $variables['node_id'] = $node->id();
+    }
+  }
+}
+/*
+  Implements hook_theme
+*/
+function futusign_theme($existing, $type, $theme, $path) {
+  return array(
+    'html__futusign_screen' => array(
+      'path' => drupal_get_path('module', 'futusign') . '/templates/screen',
+      'template' => 'index',
+      'override preprocess functions' => true,
+      'preprocess functions' => array(
+        'futusign_preprocess_html',
+      ),
+    ),
+  );
+}
