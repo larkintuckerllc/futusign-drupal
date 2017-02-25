@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>futusign Screen</title>
+</head>
+<body>
+  <div id="root" />
+  <script>
+    window.baseRoot = "{{ base_root }}";
+    window.publicPath = "{{ app_root }}";
+    window.screenId = {{ node_id }};
+  </script>
+  <script src="{{ app_root }}/vendor.bundle.js"></script>
+  <script src="{{ app_root }}/main.bundle.js"></script>
+</body>
+</html>

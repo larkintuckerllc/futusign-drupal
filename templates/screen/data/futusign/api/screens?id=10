@@ -1,0 +1,102 @@
+[
+  {
+    "nid": [
+      {
+        "value": "10"
+      }
+    ],
+    "uuid": [
+      {
+        "value": "4005f822-ddd2-4a29-82b8-080769ca6869"
+      }
+    ],
+    "vid": [
+      {
+        "value": "10"
+      }
+    ],
+    "langcode": [
+      {
+        "value": "en"
+      }
+    ],
+    "type": [
+      {
+        "target_id": "futusign_screen",
+        "target_type": "node_type",
+        "target_uuid": "78eeae49-c557-4771-9c88-0dbb33443786"
+      }
+    ],
+    "title": [
+      {
+        "value": "Test"
+      }
+    ],
+    "uid": [
+      {
+        "target_id": "1",
+        "target_type": "user",
+        "target_uuid": "5d2f049e-3c78-4532-97fd-a7137f948a95",
+        "url": "/user/1"
+      }
+    ],
+    "status": [
+      {
+        "value": "1"
+      }
+    ],
+    "created": [
+      {
+        "value": "1487890860"
+      }
+    ],
+    "changed": [
+      {
+        "value": "1487890868"
+      }
+    ],
+    "promote": [
+      {
+        "value": "0"
+      }
+    ],
+    "sticky": [
+      {
+        "value": "0"
+      }
+    ],
+    "revision_timestamp": [
+      {
+        "value": "1487890868"
+      }
+    ],
+    "revision_uid": [
+      {
+        "target_id": "1",
+        "target_type": "user",
+        "target_uuid": "5d2f049e-3c78-4532-97fd-a7137f948a95",
+        "url": "/user/1"
+      }
+    ],
+    "revision_log": [],
+    "revision_translation_affected": [
+      {
+        "value": "1"
+      }
+    ],
+    "default_langcode": [
+      {
+        "value": "1"
+      }
+    ],
+    "path": [],
+    "field_futusign_sc_su_playlists": [
+      {
+        "target_id": "6",
+        "target_type": "taxonomy_term",
+        "target_uuid": "3e7c980d-defe-4895-8293-dbf81f01a9c4",
+        "url": "/taxonomy/term/6"
+      }
+    ]
+  }
+]

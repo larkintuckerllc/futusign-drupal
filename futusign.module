@@ -18,7 +18,8 @@ function futusign_preprocess_html(&$variables) {
   if ($node = Drupal::request()->attributes->get('node')) {
     $content_type = $node->bundle();
     if ($content_type == 'futusign_screen') {
-      $variables['app_root'] = $base_root . $base_path . drupal_get_path('module', 'futusign') . '/templates/screen';
+      $variables['base_root'] = $base_root;
+      $variables['app_root'] = $base_root . $base_path . drupal_get_path('module', 'futusign') . '/templates/screen/dist';
       $variables['node_id'] = $node->id();
     }
   }
@@ -29,7 +30,7 @@ function futusign_preprocess_html(&$variables) {
 function futusign_theme($existing, $type, $theme, $path) {
   return array(
     'html__futusign_screen' => array(
-      'path' => drupal_get_path('module', 'futusign') . '/templates/screen',
+      'path' => drupal_get_path('module', 'futusign') . '/templates/screen/dist',
       'template' => 'index',
       'override preprocess functions' => true,
       'preprocess functions' => array(
