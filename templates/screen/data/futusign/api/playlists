@@ -1,0 +1,54 @@
+[
+  {
+    "tid": [
+      {
+        "value": "6"
+      }
+    ],
+    "uuid": [
+      {
+        "value": "3e7c980d-defe-4895-8293-dbf81f01a9c4"
+      }
+    ],
+    "langcode": [
+      {
+        "value": "en"
+      }
+    ],
+    "vid": [
+      {
+        "target_id": "futusign_playlist",
+        "target_type": "taxonomy_vocabulary",
+        "target_uuid": "714d21b9-d796-4b41-8310-9a3e6ea96ac3"
+      }
+    ],
+    "name": [
+      {
+        "value": "all"
+      }
+    ],
+    "description": [
+      {
+        "value": null,
+        "format": null
+      }
+    ],
+    "weight": [
+      {
+        "value": "0"
+      }
+    ],
+    "parent": [],
+    "changed": [
+      {
+        "value": "1487890831"
+      }
+    ],
+    "default_langcode": [
+      {
+        "value": "1"
+      }
+    ],
+    "path": []
+  }
+]
