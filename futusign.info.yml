@@ -1,6 +1,6 @@
 name: futusign
 description: Manage and display digital signage content
-package: Custom
+package: Other
 
 type: module
 core: 8.x

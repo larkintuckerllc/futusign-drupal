@@ -4,8 +4,9 @@
 */
 function futusign_theme_suggestions_html_alter(array &$suggestions, array $variables) {
   if ($node = Drupal::request()->attributes->get('node')) {
+    $is_admin = Drupal::service('router.admin_context')->isAdminRoute();
     $content_type = $node->bundle();
-    if ($content_type == 'futusign_screen') {
+    if ($content_type == 'futusign_screen' && $is_admin == 0) {
       $suggestions[] = 'html__futusign_screen';
     }
   }
